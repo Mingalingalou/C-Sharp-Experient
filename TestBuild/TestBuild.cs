@@ -1,0 +1,97 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+/***************************************************************************
+Creating program to use everything learnt.
+Situation:
+    - Logging win history over 1 week Monday - Sunday
+        - Data to be input manually by user.
+    - Add up total wins
+    - Podium placement
+    - Save and export data into a file? Spreadsheet? Database?
+Notes:
+    - What to do if Tie?
+****************************************************************************/
+namespace Practice
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ValidateProgram.Team myVar = new ValidateProgram.Team();
+            // While Loop to check input is Red, Blue or Green, then assign myVar accordingly to output
+            ValidateProgram.ValidateTeamChoice();
+
+            // use myVar to output corresponding string.
+            switch (myVar)
+            {
+                case ValidateProgram.Team.Red:
+                    Console.WriteLine("Red Team scored 1 point!");
+                    break;
+                case ValidateProgram.Team.Blue:
+                    Console.WriteLine("Blue Team scored 1 point!");
+                    break;
+                case ValidateProgram.Team.Green:
+                    Console.WriteLine("Green Team scored 1 point!");
+                    break;
+            }
+        }
+    }
+
+    class ValidateProgram : Program
+    {
+
+        public enum Team // define fixed variables.
+        {
+            Red,
+            Blue,
+            Green
+        }
+
+       
+        public static void ValidateTeamChoice()
+        {
+            Team myVar = new Team();
+ 
+            int check = 0;
+            while (check != 1)
+            {
+                // TO DO: in string have incrementing day simulating week...
+                Console.WriteLine("Select winning team of day: \n 1 - Red \n 2 - Blue \n 3 - Green \n\nYour input:");
+                string status = Console.ReadLine();
+
+                if ((status == "Red") || (status == "red") || (status == "1"))
+                {
+                    myVar = Team.Red;
+                    check = 1;
+                }
+
+                else if ((status == "Blue") || (status == "blue") || (status == "2"))
+                {
+                    myVar = Team.Blue;
+                    check = 1;
+                }
+
+                else if ((status == "Green") || (status == "green") || (status == "3"))
+                {
+                    myVar = Team.Green;
+                    check = 1;
+                }
+
+                else
+                {
+                    Console.WriteLine("Invalid input, Please read the damn instructions and try again >:(");
+                    check = 0;
+                }
+            }
+        }
+    }
+}
+/**********************************************************************************************
+Notes:
+BUG! case not updating correctly (Red team always wins...)
+
+***********************************************************************************************/
