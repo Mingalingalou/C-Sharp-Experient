@@ -70,13 +70,13 @@ namespace Practice
             switch (myVar)
             {
                 case Team.Red:
-                    Console.WriteLine("Status changed to - Red level");
+                    Console.WriteLine("Red Team scored 1 point!");
                     break;
                 case Team.Blue:
-                    Console.WriteLine("Status changed to - Blue level");
+                    Console.WriteLine("Blue Team scored 1 point!");
                     break;
                 case Team.Green:
-                    Console.WriteLine("Status changed to - Green level");
+                    Console.WriteLine("Green Team scored 1 point!");
                     break;
             }
         }
