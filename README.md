@@ -12,7 +12,7 @@ To Write code that will:
         - Data to be input manually by user.
     - Add up total wins
     - Podium placement
-    - Save and export data in a file? Spreadsheet? Database?
+    - Save and export data into a file? Spreadsheet? Database?
 
 
 ### Completed stages
