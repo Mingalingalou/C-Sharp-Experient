@@ -31,7 +31,7 @@ namespace Practice
         {
             Team myVar = new Team();
 
-            // While Loop to check input is Low, Medium or High, then assign myVar accordingly to output
+            // While Loop to check input is Red, Blue or Green, then assign myVar accordingly to output
             int check = 0;
 
             while (check != 1)
