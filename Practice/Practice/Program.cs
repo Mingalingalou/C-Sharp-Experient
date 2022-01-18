@@ -12,7 +12,7 @@ Situation:
         - Data to be input manually by user.
     - Add up total wins
     - Podium placement
-    - Save and export data in a file? Spreadsheet?
+    - Save and export data into a file? Spreadsheet? Database?
 
 Notes:
     - What to do if Tie?
